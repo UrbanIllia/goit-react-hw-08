@@ -17,7 +17,7 @@ const ContactList = () => {
           <Contact key={contact.id} contact={contact} />
         ))
       ) : (
-        <p className={css.noContacts}> Розірвати зв’язок</p>
+        <p className={css.noContacts}>Зв’язок розірвано</p>
       )}
     </ul>
   );
