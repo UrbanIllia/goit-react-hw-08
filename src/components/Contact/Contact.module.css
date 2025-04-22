@@ -1,0 +1,40 @@
+.contactInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff0000, inset 0 0 5px #ff0000;
+}
+
+.name {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+}
+
+.number {
+  color: #00b7eb;
+  text-shadow: 0 0 5px #00b7eb;
+}
+
+.deleteButton {
+  padding: 5px 10px;
+  background: linear-gradient(90deg, #ff0000, #ff4040);
+  color: #0a0f2b;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px #0a0f2b;
+  box-shadow: 0 0 10px #ff0000;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.deleteButton:hover {
+  box-shadow: 0 0 20px #ff0000, 0 0 30px #ff4040;
+  transform: scale(1.05);
+}
