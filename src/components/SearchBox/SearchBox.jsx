@@ -1,20 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 import css from './SearchBox.module.css';
+import { selectNameFilter } from '../../redux/filtersSlice';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector((state) => state.filters.name);
+  const filter = useSelector(selectNameFilter);
 
   return (
-    <div className={css.searchBox}>
-      <label className={css.label}>
+    <div className={css.scanModule}>
+      <label className={css.scanLabel}>
         Сканувати сигнатури повстанців...
         <input
           type="text"
           value={filter}
           onChange={(e) => dispatch(changeFilter(e.target.value))}
-          className={css.input}
+          className={css.scanInput}
           placeholder="Пошук...."
         />
       </label>

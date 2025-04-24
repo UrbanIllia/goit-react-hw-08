@@ -1,16 +1,16 @@
-.searchBox {
+.scanModule {
   max-width: 400px;
   margin: 0 auto 20px;
 }
 
-.label {
+.scanLabel {
   display: block;
   color: #00b7eb;
   font-weight: 600;
   text-shadow: 0 0 5px #00b7eb;
 }
 
-.input {
+.scanInput {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -23,7 +23,9 @@
   box-shadow: 0 0 10px #00b7eb;
 }
 
-.input:focus {
+.scanInput:focus {
   outline: none;
-  box-shadow: 0 0 15px #00b7eb, 0 0 25px #00b7eb;
+  box-shadow:
+    0 0 15px #00b7eb,
+    0 0 25px #00b7eb;
 }

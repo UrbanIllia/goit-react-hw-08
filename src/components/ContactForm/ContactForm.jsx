@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 import css from './ContactForm.module.css';
-import { nanoid } from 'nanoid';
+import { selectContacts } from '../../redux/contactsSlice';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector((state) => state.contacts.items);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,43 +18,37 @@ const ContactForm = () => {
         (contact) => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
-      alert(`${name} is already in contacts.`);
+      alert(`${name} вже є в реєстрі.`);
       return;
     }
 
-    dispatch(
-      addContact({
-        id: nanoid(),
-        name,
-        number,
-      })
-    );
+    dispatch(addContact({ name, number }));
     form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
-      <label className={css.label}>
+    <form onSubmit={handleSubmit} className={css.dataEntry}>
+      <label className={css.inputLabel}>
         Ідентифікатор пілота
         <input
           type="text"
           name="name"
           required
-          className={css.input}
-          placeholder="Введіть ідентефікатор"
+          className={css.inputField}
+          placeholder="Введіть ідентифікатор"
         />
       </label>
-      <label className={css.label}>
+      <label className={css.inputLabel}>
         Частота гіперзв’язку
         <input
           type="tel"
           name="number"
           required
-          className={css.input}
+          className={css.inputField}
           placeholder="Введіть частоту"
         />
       </label>
-      <button type="submit" className={css.button}>
+      <button type="submit" className={css.submitButton}>
         Зареєструвати нового союзника
       </button>
     </form>

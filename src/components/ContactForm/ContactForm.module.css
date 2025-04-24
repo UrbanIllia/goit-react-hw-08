@@ -1,14 +1,16 @@
-.form {
+.dataEntry {
   max-width: 400px;
   margin: 0 auto 20px;
   padding: 20px;
   background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
   border: 2px solid #00ff00;
   border-radius: 12px;
-  box-shadow: 0 0 15px #00ff00, inset 0 0 5px #00ff00;
+  box-shadow:
+    0 0 15px #00ff00,
+    inset 0 0 5px #00ff00;
 }
 
-.label {
+.inputLabel {
   display: block;
   margin-bottom: 10px;
   color: #00ff00;
@@ -16,7 +18,7 @@
   text-shadow: 0 0 5px #00ff00;
 }
 
-.input {
+.inputField {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -28,12 +30,12 @@
   font-size: 16px;
 }
 
-.input:focus {
+.inputField:focus {
   outline: none;
   box-shadow: 0 0 10px #00b7eb;
 }
 
-.button {
+.submitButton {
   display: block;
   width: 100%;
   padding: 10px;
@@ -46,10 +48,14 @@
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 5px #0a0f2b;
   box-shadow: 0 0 10px #00ff00;
-  transition: box-shadow 0.3s, transform 0.2s;
+  transition:
+    box-shadow 0.3s,
+    transform 0.2s;
 }
 
-.button:hover {
-  box-shadow: 0 0 20px #00ff00, 0 0 30px #00b7eb;
+.submitButton:hover {
+  box-shadow:
+    0 0 20px #00ff00,
+    0 0 30px #00b7eb;
   transform: scale(1.05);
 }
