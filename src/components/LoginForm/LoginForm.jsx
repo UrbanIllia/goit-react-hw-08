@@ -30,7 +30,7 @@ function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form className={styles.form}>
-        <div className={styles.indicator}></div> {/* Додаємо індикатор */}
+        <div className={styles.indicator}></div>
         <div className={styles.field}>
           <label htmlFor="holocomm">Holocomm ID</label>
           <Field name="holocomm" type="email" className={styles.input} />

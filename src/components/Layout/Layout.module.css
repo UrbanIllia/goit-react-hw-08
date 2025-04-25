@@ -7,7 +7,6 @@
   z-index: 1;
 }
 
-/* Ефект гіперпростору для main */
 main {
   animation: hyperspace 1s ease-in-out;
 }
@@ -27,7 +26,7 @@ main {
 
 .audioControl {
   position: absolute;
-  top: 115px; /* Зміщуємо вниз, щоб було над головною надписю */
+  top: 115px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

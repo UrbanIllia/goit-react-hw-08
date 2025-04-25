@@ -10,7 +10,6 @@ const contactsSlice = createSlice({
   },
   reducers: {
     resetContacts: (state) => {
-      // Змінюємо назву з reset на resetContacts
       state.items = [];
       state.loading = false;
       state.error = null;
@@ -59,5 +58,5 @@ const contactsSlice = createSlice({
   },
 });
 
-export const { resetContacts } = contactsSlice.actions; // Оновлюємо експорт
+export const { resetContacts } = contactsSlice.actions;
 export default contactsSlice.reducer;

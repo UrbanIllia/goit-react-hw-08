@@ -14,7 +14,6 @@
   overflow: hidden;
 }
 
-/* Текстура металу */
 .form::before {
   content: '';
   position: absolute;
@@ -33,7 +32,6 @@
   pointer-events: none;
 }
 
-/* Панельні шви */
 .form::after {
   content: '';
   position: absolute;
@@ -52,7 +50,6 @@
   pointer-events: none;
 }
 
-/* Мерехтливий індикатор */
 .indicator {
   position: absolute;
   top: 10px;

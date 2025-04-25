@@ -13,7 +13,6 @@ function AppBar() {
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
       <div className={styles.indicator}></div>{' '}
-      {/* Додаємо мерехтливий індикатор */}
     </header>
   );
 }

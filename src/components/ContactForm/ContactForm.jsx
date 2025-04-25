@@ -27,7 +27,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
     >
       <Form className={styles.form}>
-        <div className={styles.indicator}></div> {/* Додаємо індикатор */}
+        <div className={styles.indicator}></div>
         <div className={styles.field}>
           <label htmlFor="name">Kin Name</label>
           <Field name="name" type="text" className={styles.input} />

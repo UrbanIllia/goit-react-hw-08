@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import AppBar from '../AppBar/AppBar';
 import styles from './Layout.module.css';
+import DroidAssistant from '../DroidAssistant.jsx/DroidAssistant';
 
 function Layout() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -66,6 +67,7 @@ function Layout() {
         </button>
         {audioError && <p className={styles.errorMessage}>{audioError}</p>}
       </div>
+      <DroidAssistant />
       <main>
         <Outlet />
       </main>
