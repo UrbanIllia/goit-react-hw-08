@@ -1,0 +1,67 @@
+.holoDeck {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+  color: #ffd700;
+  z-index: 1;
+}
+
+/* Ефект гіперпростору для main */
+main {
+  animation: hyperspace 1s ease-in-out;
+}
+
+@keyframes hyperspace {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.audioControl {
+  position: absolute;
+  top: 115px; /* Зміщуємо вниз, щоб було над головною надписю */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.audioButton {
+  background: rgba(0, 255, 204, 0.2);
+  border: 1px solid #00ffcc;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: #00ffcc;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  box-shadow:
+    0 0 5px #00ffcc,
+    inset 0 0 5px #00ccff;
+  transition: all 0.3s ease;
+}
+
+.audioButton:hover {
+  background: rgba(0, 255, 204, 0.5);
+  box-shadow:
+    0 0 10px #00ccff,
+    inset 0 0 5px #00ccff;
+  color: #fff;
+}
+
+.errorMessage {
+  color: #ff4040;
+  font-size: 12px;
+  text-shadow: 0 0 5px #ff4040;
+}

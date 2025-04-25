@@ -1,58 +1,53 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
-import css from './ContactForm.module.css';
-import { selectContacts } from '../../redux/contactsSlice';
+import { useDispatch } from 'react-redux';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { addContact } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
+import styles from './ContactForm.module.css';
 
-const ContactForm = () => {
+const validationSchema = Yup.object({
+  name: Yup.string().required('Required'),
+  number: Yup.string().required('Required'),
+});
+
+function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.elements.name.value;
-    const number = form.elements.number.value;
-
-    if (
-      contacts.some(
-        (contact) => contact.name.toLowerCase() === name.toLowerCase()
-      )
-    ) {
-      alert(`${name} вже є в реєстрі.`);
-      return;
-    }
-
-    dispatch(addContact({ name, number }));
-    form.reset();
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(addContact(values)).then(() => {
+      toast.success('Kin added to the registry!');
+    });
+    resetForm();
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.dataEntry}>
-      <label className={css.inputLabel}>
-        Ідентифікатор пілота
-        <input
-          type="text"
-          name="name"
-          required
-          className={css.inputField}
-          placeholder="Введіть ідентифікатор"
-        />
-      </label>
-      <label className={css.inputLabel}>
-        Частота гіперзв’язку
-        <input
-          type="tel"
-          name="number"
-          required
-          className={css.inputField}
-          placeholder="Введіть частоту"
-        />
-      </label>
-      <button type="submit" className={css.submitButton}>
-        Зареєструвати нового союзника
-      </button>
-    </form>
+    <Formik
+      initialValues={{ name: '', number: '' }}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+    >
+      <Form className={styles.form}>
+        <div className={styles.indicator}></div> {/* Додаємо індикатор */}
+        <div className={styles.field}>
+          <label htmlFor="name">Kin Name</label>
+          <Field name="name" type="text" className={styles.input} />
+          <ErrorMessage name="name" component="div" className={styles.error} />
+        </div>
+        <div className={styles.field}>
+          <label htmlFor="number">Holocomm Number</label>
+          <Field name="number" type="text" className={styles.input} />
+          <ErrorMessage
+            name="number"
+            component="div"
+            className={styles.error}
+          />
+        </div>
+        <button type="submit" className={styles.submitButton}>
+          Add Kin to Registry
+        </button>
+      </Form>
+    </Formik>
   );
-};
+}
 
 export default ContactForm;

@@ -9,12 +9,10 @@
   box-shadow:
     inset 0 0 10px #000,
     0 0 15px #ffd700;
-  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
 }
 
-/* Текстура металу */
 .form::before {
   content: '';
   position: absolute;
@@ -33,26 +31,6 @@
   pointer-events: none;
 }
 
-/* Панельні шви */
-.form::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #ffd700 30%,
-    #ffd700 70%,
-    transparent
-  );
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Мерехтливий індикатор */
 .indicator {
   position: absolute;
   top: 10px;

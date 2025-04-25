@@ -1,26 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilter } from '../../redux/filtersSlice';
-import css from './SearchBox.module.css';
-import { selectNameFilter } from '../../redux/filtersSlice';
+import { setFilter } from '../../redux/filters/slice';
+import { selectFilter } from '../../redux/selectors';
+import styles from './SearchBox.module.css';
 
-const SearchBox = () => {
+function SearchBox() {
   const dispatch = useDispatch();
-  const filter = useSelector(selectNameFilter);
+  const filter = useSelector(selectFilter);
+
+  const handleFilterChange = (e) => {
+    dispatch(setFilter(e.target.value));
+  };
 
   return (
-    <div className={css.scanModule}>
-      <label className={css.scanLabel}>
-        Сканувати сигнатури повстанців...
-        <input
-          type="text"
-          value={filter}
-          onChange={(e) => dispatch(changeFilter(e.target.value))}
-          className={css.scanInput}
-          placeholder="Пошук...."
-        />
-      </label>
+    <div className={styles.searchBox}>
+      <label htmlFor="filter">Search Kin by Name or Holocomm</label>
+      <input
+        id="filter"
+        type="text"
+        value={filter}
+        onChange={handleFilterChange}
+        className={styles.input}
+        placeholder="Enter name or holocomm..."
+      />
     </div>
   );
-};
+}
 
 export default SearchBox;
