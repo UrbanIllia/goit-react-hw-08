@@ -1,0 +1,252 @@
+.container.section {
+  margin-top: 59px;
+  margin-bottom: 93px;
+}
+
+.maintitle {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: #251834;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .maintitle {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+}
+.secondtitle {
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #251834;
+  width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+.secondtitle span {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .secondtitle {
+    font-size: 16px;
+    width: 864px;
+    margin-bottom: 32px;
+  }
+  .secondtitle span {
+    font-weight: 700;
+  }
+}
+.mySwiper {
+  width: 288px;
+  height: 162px;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .mySwiper {
+    width: 470px;
+    height: 260px;
+  }
+}
+.mySwiper2 .swiper-slide {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .mySwiper2 .swiper-slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px 40px;
+  }
+}
+.item-wrapper {
+  padding-left: 98px;
+  width: 320px;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-wrapper {
+    padding-left: 114px;
+    width: 370px;
+  }
+}
+.item-wrapper-reverse {
+  width: 370px;
+  padding-right: 130px;
+}
+
+.item {
+  position: relative;
+}
+
+.item-title {
+  font-family: "Lora", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #251834;
+  z-index: 5;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-title {
+    font-size: 16px;
+  }
+}
+.item-text {
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #251834;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-text {
+    font-size: 16px;
+  }
+}
+.item-circle {
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-circle {
+    left: -76px;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+  }
+}
+.item-circleReverse {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-circleReverse {
+    right: -80px;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+  }
+}
+.item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 216px;
+  height: 143px;
+  padding: 0 24px 0 52px;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-content {
+    width: 265px;
+    height: 176px;
+    padding: 0 10px 0 89px;
+  }
+}
+.item-contentReverse {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 216px;
+  height: 143px;
+  padding: 0 80px 0 6px;
+  text-align: right;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-contentReverse {
+    width: 265px;
+    height: 176px;
+    padding: 0 108px 0 6px;
+  }
+}
+.text-action {
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #251834;
+  margin-bottom: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .text-action {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+.img-swiper {
+  width: 288px;
+  height: 162px;
+}
+
+@media screen and (min-width: 1200px) {
+  .img-swiper {
+    width: 470px;
+    height: 264px;
+  }
+}
+.swiper-pagination {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #999;
+  opacity: 0.5;
+  margin: 0 4px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #251834;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}/*# sourceMappingURL=00-same-sections.css.map */

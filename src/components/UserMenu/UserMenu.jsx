@@ -8,10 +8,16 @@ function UserMenu() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
-  const handleLogout = () => {
-    dispatch(logout()).then(() => {
+  const handleLogout = async () => {
+    console.log('Logout button clicked');
+    try {
+      await dispatch(logout()).unwrap();
+      console.log('Logout successful');
       dispatch(resetContacts());
-    });
+    } catch (error) {
+      console.error('Logout failed:', error);
+      dispatch(resetContacts());
+    }
   };
 
   return (

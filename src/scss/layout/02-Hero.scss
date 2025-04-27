@@ -1,0 +1,374 @@
+.hero {
+    padding-top: 88px;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+
+        padding-top: 169px;
+    }
+}
+
+// ......................................................
+.hero-wrapper {
+    position: relative;
+    padding-top: 236px;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-wrapper {
+        padding-top: 40px;
+    }
+}
+
+// ........................................................
+.hero-wrapper-img {
+    display: flex;
+    flex-direction: row;
+}
+
+// .....................................................
+.hero-wrapper-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    max-width: 288px;
+    margin-left: auto;
+    margin-right: 0;
+
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-wrapper-text {
+        gap: 48px;
+        max-width: 510px;
+    }
+}
+
+// ..........................................................
+.hero-wrapper-girl {
+    position: absolute;
+    top: 0px;
+    left: -8px;
+    z-index: 50;
+    animation: slideIn 1200ms ease-in-out forwards;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-wrapper-girl {
+        top: -10px;
+        left: -76px;
+        width: 322px;
+        height: 520px;
+        animation: slideIn 1200ms ease-in-out forwards;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        left: -27px;
+    }
+
+    to {
+        left: -8px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    @keyframes slideIn {
+        from {
+            left: -76px;
+        }
+
+        to {
+            left: 0px;
+        }
+    }
+}
+
+// ........................................................
+.hero-wrapper-phoneleft {
+    position: absolute;
+    top: 10px;
+    right: 121px;
+    z-index: 49;
+    animation: slidePhoneLeft 1200ms ease-in-out forwards;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-wrapper-phoneleft {
+        top: 41px;
+        left: 101px;
+        width: 148px;
+        height: 361px;
+        animation: slidePhoneLeft 1200ms ease-in-out forwards;
+    }
+}
+
+@keyframes slidePhoneLeft {
+    from {
+        right: 121px;
+    }
+
+    to {
+        right: 76px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    @keyframes slidePhoneLeft {
+        from {
+            left: 101px;
+        }
+
+        to {
+            left: 248px;
+        }
+    }
+}
+
+// ...........................................................
+.hero-wrapper-phoneright {
+    position: absolute;
+    top: 2px;
+    right: -12px;
+    z-index: 48;
+    animation: slidePhoneRight 1200ms ease-in-out forwards;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-wrapper-phoneright {
+        top: 25px;
+        left: 403px;
+        width: 147px;
+        height: 357px;
+        animation: slidePhoneRight 1200ms ease-in-out forwards;
+    }
+}
+
+@keyframes slidePhoneRight {
+    from {
+        right: -12px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    @keyframes slidePhoneRight {
+        from {
+            left: 403px;
+        }
+
+        to {
+            left: 370px;
+        }
+    }
+}
+
+// ...............................................................
+.hero-title {
+    font-family: "Lilita One", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: $_pink2;
+    opacity: 0;
+    animation: fadeIn 1200ms ease-in-out forwards;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1;
+    filter: drop-shadow(0 8px 4px rgba(255, 255, 255, 1));
+    text-shadow: rgb(37, 24, 52) 7px 0px 0px,
+        rgb(37, 24, 52) 6.92869px 0.996602px 0px,
+        rgb(37, 24, 52) 6.71622px 1.9729px 0px,
+        rgb(37, 24, 52) 6.36692px 2.909px 0px,
+        rgb(37, 24, 52) 5.8879px 3.78584px 0px,
+        rgb(37, 24, 52) 5.28893px 4.58555px 0px,
+        rgb(37, 24, 52) 4.5822px 5.29183px 0px,
+        rgb(37, 24, 52) 3.78212px 5.8903px 0px,
+        rgb(37, 24, 52) 2.90498px 6.36876px 0px,
+        rgb(37, 24, 52) 1.96865px 6.71747px 0px,
+        rgb(37, 24, 52) 0.992221px 6.92932px 0px,
+        rgb(37, 24, 52) -0.00442571px 7px 0px,
+        rgb(37, 24, 52) -1.00098px 6.92806px 0px,
+        rgb(37, 24, 52) -1.97715px 6.71498px 0px,
+        rgb(37, 24, 52) -2.91303px 6.36508px 0px,
+        rgb(37, 24, 52) -3.78956px 5.88551px 0px,
+        rgb(37, 24, 52) -4.58889px 5.28603px 0px,
+        rgb(37, 24, 52) -5.29472px 4.57885px 0px,
+        rgb(37, 24, 52) -5.89269px 3.77839px 0px,
+        rgb(37, 24, 52) -6.3706px 2.90095px 0px,
+        rgb(37, 24, 52) -6.71871px 1.96441px 0px,
+        rgb(37, 24, 52) -6.92995px 0.98784px 0px,
+        rgb(37, 24, 52) -6.99999px -0.00885142px 0px,
+        rgb(37, 24, 52) -6.92743px -1.00536px 0px,
+        rgb(37, 24, 52) -6.71372px -1.98139px 0px,
+        rgb(37, 24, 52) -6.36324px -2.91705px 0px,
+        rgb(37, 24, 52) -5.88311px -3.79328px 0px,
+        rgb(37, 24, 52) -5.28313px -4.59223px 0px,
+        rgb(37, 24, 52) -4.57551px -5.29762px 0px,
+        rgb(37, 24, 52) -3.77467px -5.89507px 0px,
+        rgb(37, 24, 52) -2.89692px -6.37243px 0px,
+        rgb(37, 24, 52) -1.96016px -6.71995px 0px,
+        rgb(37, 24, 52) -0.983458px -6.93057px 0px,
+        rgb(37, 24, 52) 0.0132771px -6.99999px 0px,
+        rgb(37, 24, 52) 1.00974px -6.92679px 0px,
+        rgb(37, 24, 52) 1.98564px -6.71247px 0px,
+        rgb(37, 24, 52) 2.92107px -6.36139px 0px,
+        rgb(37, 24, 52) 3.797px -5.88071px 0px,
+        rgb(37, 24, 52) 4.59557px -5.28022px 0px,
+        rgb(37, 24, 52) 5.30051px -4.57215px 0px,
+        rgb(37, 24, 52) 5.89746px -3.77094px 0px,
+        rgb(37, 24, 52) 6.37426px -2.89289px 0px,
+        rgb(37, 24, 52) 6.72119px -1.95591px 0px,
+        rgb(37, 24, 52) 6.93119px -0.979076px 0px,
+        rgb(0, 0, 0, 0.5) 0 8px 4px;
+    ;
+    max-width: 212px;
+    margin-bottom: 16px;
+
+    span {
+        color: $_yellow3;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-title {
+        font-size: 64px;
+        max-width: 510px;
+        margin-bottom: 0px;
+        filter: drop-shadow(0 12px 3px rgba(255, 255, 255, 1));
+        text-shadow: rgb(37, 24, 52) 8px 0px 0px,
+            rgb(37, 24, 52) 7.93758px 0.997398px 0px,
+            rgb(37, 24, 52) 7.7513px 1.97923px 0px,
+            rgb(37, 24, 52) 7.44406px 2.93018px 0px,
+            rgb(37, 24, 52) 7.02066px 3.8354px 0px,
+            rgb(37, 24, 52) 6.48771px 4.68078px 0px,
+            rgb(37, 24, 52) 5.85351px 5.45311px 0px,
+            rgb(37, 24, 52) 5.12797px 6.14035px 0px,
+            rgb(37, 24, 52) 4.32242px 6.73177px 0px,
+            rgb(37, 24, 52) 3.44941px 7.21814px 0px,
+            rgb(37, 24, 52) 2.52258px 7.59188px 0px,
+            rgb(37, 24, 52) 1.55638px 7.84714px 0px,
+            rgb(37, 24, 52) 0.565898px 7.97996px 0px,
+            rgb(37, 24, 52) -0.433417px 7.98825px 0px,
+            rgb(37, 24, 52) -1.42597px 7.87189px 0px,
+            rgb(37, 24, 52) -2.39627px 7.63269px 0px,
+            rgb(37, 24, 52) -3.32917px 7.27438px 0px,
+            rgb(37, 24, 52) -4.21013px 6.80256px 0px,
+            rgb(37, 24, 52) -5.02539px 6.22459px 0px,
+            rgb(37, 24, 52) -5.76223px 5.54948px 0px,
+            rgb(37, 24, 52) -6.40915px 4.78778px 0px,
+            rgb(37, 24, 52) -6.95606px 3.95136px 0px,
+            rgb(37, 24, 52) -7.39442px 3.05329px 0px,
+            rgb(37, 24, 52) -7.71739px 2.10757px 0px,
+            rgb(37, 24, 52) -7.91994px 1.12896px 0px,
+            rgb(37, 24, 52) -7.9989px 0.132735px 0px,
+            rgb(37, 24, 52) -7.95304px -0.865561px 0px,
+            rgb(37, 24, 52) -7.78307px -1.85035px 0px,
+            rgb(37, 24, 52) -7.49165px -2.80627px 0px,
+            rgb(37, 24, 52) -7.08333px -3.71839px 0px,
+            rgb(37, 24, 52) -6.56447px -4.57249px 0px,
+            rgb(37, 24, 52) -5.94318px -5.35524px 0px,
+            rgb(37, 24, 52) -5.22915px -6.05442px 0px,
+            rgb(37, 24, 52) -4.43352px -6.65912px 0px,
+            rgb(37, 24, 52) -3.5687px -7.15991px 0px,
+            rgb(37, 24, 52) -2.6482px -7.54898px 0px,
+            rgb(37, 24, 52) -1.68637px -7.82024px 0px,
+            rgb(37, 24, 52) -0.698222px -7.96947px 0px,
+            rgb(37, 24, 52) 0.300817px -7.99434px 0px,
+            rgb(37, 24, 52) 1.29516px -7.89446px 0px,
+            rgb(37, 24, 52) 2.2693px -7.67139px 0px,
+            rgb(37, 24, 52) 3.20802px -7.32862px 0px,
+            rgb(37, 24, 52) 4.09668px -6.87148px 0px,
+            rgb(37, 24, 52) 4.92142px -6.30711px 0px,
+            rgb(37, 24, 52) 5.66936px -5.64432px 0px,
+            rgb(37, 24, 52) 6.32883px -4.89346px 0px,
+            rgb(37, 24, 52) 6.88954px -4.06623px 0px,
+            rgb(37, 24, 52) 7.34274px -3.17555px 0px,
+            rgb(37, 24, 52) 7.68136px -2.23532px 0px,
+            rgb(37, 24, 52) 7.90012px -1.26021px 0px,
+            rgb(37, 24, 52) 7.9956px -0.265434px 0px,
+            rgb(0, 0, 0, 0.5) 0 9px 5px;
+        ;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// ..........................................................
+.hero-text {
+    font-family: "Lora", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #251834;
+    max-width: 288px;
+    margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-text {
+        font-size: 32px;
+        max-width: 510px;
+        margin-bottom: 0px;
+
+    }
+}
+
+// ............................................................
+.hero-btn-link {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #251834;
+    border-radius: 25px;
+    background-color: transparent;
+    width: 288px;
+    height: 65px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #1e1e1e;
+    transition: border 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    animation: changeColor 1200ms ease-in-out forwards;
+}
+
+@keyframes changeColor {
+    from {
+        background-color: transparent;
+        ;
+    }
+
+    to {
+        background-color: $_white;
+    }
+}
+
+.hero-btn-link:active {
+    box-shadow: 5px 5px 10px 0 #fff;
+}
+
+.hero-btn-link:focus,
+.hero-btn-link:hover {
+    border: 7px solid #251834;
+}
+
+
+.hero-btn-link-svg {
+    margin-right: 12px;
+}

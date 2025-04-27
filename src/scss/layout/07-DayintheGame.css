@@ -1,0 +1,13 @@
+.day-circle {
+  background-color: rgb(251, 178, 66);
+  box-shadow: 0 0 8px 12px rgb(251, 178, 66), 0 0 5px 24px rgba(255, 255, 255, 0.7333333333), 0 0 16px 43px #fae6d9;
+}
+
+.day-content {
+  background: linear-gradient(270deg, #fae6d9 15%, #FBB242 100%);
+}
+
+.day-btn {
+  margin: 0 auto;
+  margin-top: 80px;
+}/*# sourceMappingURL=07-DayintheGame.css.map */

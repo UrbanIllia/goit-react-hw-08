@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
   background-color: rgb(0, 0, 30);
-  background-image: url('/3.jpg'); /* Шлях до твого фонового зображення */
+  background-image: url('/3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

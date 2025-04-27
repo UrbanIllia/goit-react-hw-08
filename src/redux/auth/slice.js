@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { register, login, logout, refreshUser } from './operations';
-import { resetContacts } from '../contacts/slice';
 
 const initialState = {
   user: { name: null, email: null },
@@ -24,11 +23,15 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
-      .addCase(logout.fulfilled, (state, action, { dispatch }) => {
+      .addCase(logout.fulfilled, (state) => {
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;
-        dispatch(resetContacts());
+      })
+      .addCase(logout.rejected, (state) => {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
       })
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;
@@ -45,4 +48,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export default authReducer; // Додаємо дефолтний експорт
+export default authReducer;

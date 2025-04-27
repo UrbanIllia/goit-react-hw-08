@@ -1,0 +1,34 @@
+.diaries .mySwiper::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 288px;
+    height: 162px;
+    background: rgba(44, 201, 67, 0.6);
+    opacity: 0.4;
+    filter: blur(50px);
+    border-radius: 15px;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+
+}
+
+@media screen and (min-width: 1200px) {
+    .diaries .mySwiper::before {
+        width: 466px;
+        height: 263px;
+        top: -60px;
+        left: -200px;
+    }
+}
+
+.diaries-circle {
+    background-color: rgba(75, 226, 67);
+    box-shadow: 0 0 8px 12px rgba(75, 226, 67), 0 0 5px 24px #ffffffbb, 0 0 16px 43px #fae6d9;
+}
+
+.diaries-content {
+    background: linear-gradient(270deg, #fae6d9 15%, #4be243 100%);
+
+}

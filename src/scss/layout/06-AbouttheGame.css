@@ -1,0 +1,8 @@
+.about-circle {
+  background-color: rgb(254, 141, 143);
+  box-shadow: 0 0 8px 12px rgb(254, 141, 143), 0 0 5px 24px rgba(255, 255, 255, 0.7333333333), 0 0 16px 43px #fae6d9;
+}
+
+.about-content {
+  background: linear-gradient(90deg, #fae6d9 15%, #FE8D8F 100%);
+}/*# sourceMappingURL=06-AbouttheGame.css.map */
